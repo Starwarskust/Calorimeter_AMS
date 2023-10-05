@@ -1,0 +1,1 @@
+In this project, using the Geant4 package, a calorimeter model was implemented in the AMS-02 experiment.

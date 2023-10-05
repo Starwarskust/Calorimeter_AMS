@@ -1,0 +1,30 @@
+# Macro file for the visualization setting in the initialization phase 
+
+# Create an OpenGL view and draw geometry
+/vis/open OGLI
+/vis/drawVolume
+
+# Draw smooth trajectories at end of event
+/vis/viewer/set/autoRefresh true
+/vis/scene/add/trajectories smooth
+
+# Specify view angle and zoom
+/vis/viewer/set/upVector 0 0 1
+/vis/viewer/set/viewpointThetaPhi 80 20
+# /vis/viewer/centreOn World
+/vis/viewer/zoom 1.5
+
+# Axes, eventID
+/vis/scene/add/axes 0 0 0 10 cm
+/vis/scene/add/eventID
+
+# Make the "World" box invisible
+# /vis/geometry/set/visibility World 0 false
+
+# /vis/filtering/trajectories/create/particleFilter
+# /vis/filtering/trajectories/particleFilter-0/add gamma
+# /vis/filtering/trajectories/particleFilter-0/invert true
+
+# /vis/modeling/trajectories/create/drawByParticleID
+# /vis/modeling/trajectories/drawByParticleID-0/set neutron blue
+# /vis/modeling/trajectories/drawByParticleID-0/set anti_proton red
