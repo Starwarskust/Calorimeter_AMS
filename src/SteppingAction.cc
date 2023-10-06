@@ -10,12 +10,11 @@ void SteppingAction::UserSteppingAction(const G4Step *step)
 {
   if (step->GetTrack()->GetTrackID() == 1 && step->GetTrack()->GetTrackStatus() == fStopAndKill) {
     analysisManager->FillNtupleDColumn(1, 5, step->GetPostStepPoint()->GetPosition().z());
-    if (step->GetTrack()->GetCurrentStepNumber() > 1) {
+    if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessType() != fGeneral) { // NoProcess
+      analysisManager->FillNtupleSColumn(1, 6, step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName());
+    } else {
       analysisManager->FillNtupleSColumn(1, 6, step->GetPreStepPoint()->GetProcessDefinedStep()->GetProcessName());
-    } else { // to avoid segmentation fault
-      analysisManager->FillNtupleSColumn(1, 6, "initStep");
     }
-    analysisManager->FillNtupleSColumn(1, 7, step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName());
     analysisManager->AddNtupleRow(1);
   }
 

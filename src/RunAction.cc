@@ -25,8 +25,7 @@ void RunAction::BeginOfRunAction(const G4Run*)
   analysisManager->CreateNtupleDColumn("theta");
   analysisManager->CreateNtupleDColumn("phi");
   analysisManager->CreateNtupleDColumn("Z_end");
-  analysisManager->CreateNtupleSColumn("LastProcessPreStep");
-  analysisManager->CreateNtupleSColumn("LastProcessPostStep");
+  analysisManager->CreateNtupleSColumn("LastProcess");
   analysisManager->FinishNtuple();
 
   // analysisManager->CreateNtuple("Ntuple3", "Tracks");
