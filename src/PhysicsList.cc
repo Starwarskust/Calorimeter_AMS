@@ -15,5 +15,5 @@ PhysicsList::~PhysicsList()
 //   SetCutValue(0.1*mm, "proton");
 //   SetCutValue(0.1*mm, "e-");
 //   SetCutValue(0.1*mm, "e+");
-//   SetCutValue(0.1*mm, "gamma");      
+//   SetCutValue(0.1*mm, "gamma");
 // }

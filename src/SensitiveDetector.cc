@@ -6,7 +6,7 @@ SensitiveDetector::SensitiveDetector(G4String name)
   calorimeterResponse.resize(1296);
 }
 
-SensitiveDetector::~SensitiveDetector() 
+SensitiveDetector::~SensitiveDetector()
 {}
 
 void SensitiveDetector::Initialize(G4HCofThisEvent *hitCollection)
