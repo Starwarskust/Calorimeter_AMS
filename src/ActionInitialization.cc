@@ -14,5 +14,5 @@ void ActionInitialization::Build() const
 {
   SetUserAction(new PrimaryGeneratorAction(fParticlePDG, fEnergyMin, fEnergyMax));
   SetUserAction(new RunAction(fRunNumber));
-  SetUserAction(new SteppingAction);
+  SetUserAction(new SteppingAction());
 }

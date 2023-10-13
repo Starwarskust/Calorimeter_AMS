@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
   CLHEP::HepRandom::setTheSeed(seed + runNumber);
 
   // Construct RunManager and initialize G4 kernel
-  G4RunManager *runManager = new G4RunManager;
+  G4RunManager *runManager = new G4RunManager();
   runManager->SetUserInitialization(new DetectorConstruction());
   runManager->SetUserInitialization(new PhysicsList());
   runManager->SetUserInitialization(new ActionInitialization(particlePDG, energyMin, energyMax, runNumber));
